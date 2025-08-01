@@ -51,8 +51,8 @@ A comprehensive Qt-based desktop trading platform with real-time market data, or
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Yrishe/Trading_App_Console.git
-cd Trading_App_Console
+git clone https://github.com/Yrishe/Trading-App.git
+cd Trading-App
 ```
 
 ### 2. Install Qt Dependencies
