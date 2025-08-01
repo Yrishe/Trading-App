@@ -1,0 +1,5 @@
+/Users/yrish/TRAE Projects/Trading Platform/Trading_App_Console/build/CMakeFiles/TradingDesktopApp.dir
+/Users/yrish/TRAE Projects/Trading Platform/Trading_App_Console/build/CMakeFiles/edit_cache.dir
+/Users/yrish/TRAE Projects/Trading Platform/Trading_App_Console/build/CMakeFiles/rebuild_cache.dir
+/Users/yrish/TRAE Projects/Trading Platform/Trading_App_Console/build/CMakeFiles/TradingDesktopApp_autogen_timestamp_deps.dir
+/Users/yrish/TRAE Projects/Trading Platform/Trading_App_Console/build/CMakeFiles/TradingDesktopApp_autogen.dir

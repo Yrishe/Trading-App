@@ -12,6 +12,26 @@ class MerkelMain
         MerkelMain();
         /** Call this to start the sim */
         void init();
+        
+        /** Get current time */
+        std::string getCurrentTime() const { return currentTime; }
+        
+        /** Get order book reference */
+        OrderBook& getOrderBook() { return orderBook; }
+        const OrderBook& getOrderBook() const { return orderBook; }
+        
+        /** Move to next timeframe */
+        void gotoNextTimeframe();
+        
+        /** Get market statistics */
+        void getMarketStats(const std::string& product, double& currentPrice, double& volume, double& change);
+        
+        /** Execute a trade order */
+        bool executeOrder(const std::string& product, OrderBookType orderType, double price, double amount, const std::string& username);
+        
+        /** Get current prices for a product */
+        std::vector<double> getCurrentPrices(const std::string& product, OrderBookType orderType);
+        
     private: 
         void draw();
         void presentation();
@@ -23,7 +43,6 @@ class MerkelMain
         void printWallet();
         void printCandleChart();
         void getPrices();
-        void gotoNextTimeframe();
         int getUserOption();
         void processUserOption(int userOption);
 

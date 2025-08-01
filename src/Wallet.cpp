@@ -35,7 +35,7 @@ bool Wallet::containsCurrency(std::string type, double amount)
         return currencies[type] >= amount; //return the actual value in the wallet
 }
 
-std::string Wallet::toString()
+std::string Wallet::toString() const
 {   
     // this represent the string after concatenation
     std::string s;

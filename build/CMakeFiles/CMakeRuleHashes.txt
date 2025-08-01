@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+65cc2844438f0c7f93fdbf3c983679ac CMakeFiles/TradingDesktopApp_autogen
+e309da2847b4bb8aba1a084e03a9670b TradingDesktopApp_autogen/timestamp

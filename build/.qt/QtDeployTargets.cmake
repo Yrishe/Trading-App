@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_TradingDesktopApp_FILE /Users/yrish/TRAE Projects/Trading Platform/Trading_App_Console/build/TradingDesktopApp)
+set(__QT_DEPLOY_TARGET_TradingDesktopApp_TYPE EXECUTABLE)

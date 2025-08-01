@@ -19,13 +19,8 @@ void MerkelMain::init()
     wallet.insertCurrency("USDT", 10);
     wallet.insertCurrency("DOGE", 10);
 
-    OrderBook orderBook("20200317.csv");
-
-    draw();
-    while(true)
-    {
-        presentation();
-    }
+    // For desktop app, we don't run the console loop
+    // The GUI will handle user interactions
 }
 // Draw welcome 
 void MerkelMain::draw()
@@ -464,6 +459,83 @@ void MerkelMain::processUserOption(int userOption)
     {
         gotoNextTimeframe();
     }  
+}
+
+void MerkelMain::getMarketStats(const std::string& product, double& currentPrice, double& volume, double& change)
+{
+    std::vector<OrderBookEntry> entries = orderBook.getOrders(OrderBookType::ask, product, currentTime);
+    
+    if (!entries.empty()) {
+        currentPrice = entries[0].price;
+        
+        // Calculate volume (sum of all amounts)
+        volume = 0.0;
+        for (const auto& entry : entries) {
+            volume += entry.amount;
+        }
+        
+        // Calculate price change (simplified - compare with previous timeframe)
+        std::vector<std::string> times = orderBook.getKnownProducts();
+        if (times.size() > 1) {
+            // For simplicity, we'll use a mock previous price calculation
+            // In a real implementation, you'd need to track historical prices
+            std::vector<OrderBookEntry> prevEntries = orderBook.getOrders(OrderBookType::ask, product, currentTime);
+            if (!prevEntries.empty()) {
+                double prevPrice = prevEntries[0].price;
+                change = ((currentPrice - prevPrice) / prevPrice) * 100.0;
+            } else {
+                change = 0.0;
+            }
+        } else {
+            change = 0.0;
+        }
+    } else {
+        currentPrice = 0.0;
+        volume = 0.0;
+        change = 0.0;
+    }
+}
+
+bool MerkelMain::executeOrder(const std::string& product, OrderBookType orderType, double price, double amount, const std::string& username)
+{
+    // Create order entry
+    OrderBookEntry order(price, amount, currentTime, product, orderType, username);
+    
+    // For simulation purposes, we'll assume the order is executed immediately
+    // In a real trading system, this would involve matching with existing orders
+    
+    // Check if user has sufficient funds (simplified)
+    if (orderType == OrderBookType::bid) {
+        // Buying - need sufficient quote currency (e.g., USDT)
+        double totalCost = price * amount;
+        // This would normally check the user's wallet
+        return true; // Simplified for demo
+    } else if (orderType == OrderBookType::ask) {
+        // Selling - need sufficient base currency
+        // This would normally check the user's wallet
+        return true; // Simplified for demo
+    }
+    
+    return false;
+}
+
+std::vector<double> MerkelMain::getCurrentPrices(const std::string& product, OrderBookType orderType)
+{
+    std::vector<OrderBookEntry> entries = orderBook.getOrders(orderType, product, currentTime);
+    std::vector<double> prices;
+    
+    for (const auto& entry : entries) {
+        prices.push_back(entry.price);
+    }
+    
+    // Sort prices
+    if (orderType == OrderBookType::ask) {
+        std::sort(prices.begin(), prices.end()); // Ascending for asks
+    } else {
+        std::sort(prices.rbegin(), prices.rend()); // Descending for bids
+    }
+    
+    return prices;
 }
 
 

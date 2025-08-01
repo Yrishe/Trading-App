@@ -25,7 +25,7 @@ class Wallet
         void processSale(OrderBookEntry& sale);
 
         /** generate a string representation of the wallet */
-        std::string toString();
+        std::string toString() const;
 
     private:
         std::map<std::string,double> currencies;
