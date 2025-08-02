@@ -1,5 +1,7 @@
 # Trading Desktop Application
 
+<img width="1392" height="920" alt="image" src="https://github.com/user-attachments/assets/159f7c77-de74-4dac-9545-ee19e9334f92" />
+
 A comprehensive Qt-based desktop trading platform with real-time market data, order management, and portfolio tracking capabilities.
 
 ## Features
@@ -8,6 +10,9 @@ A comprehensive Qt-based desktop trading platform with real-time market data, or
 - Secure user login with encrypted password storage
 - SQLite database for user management
 - Session management and user preferences
+
+<img width="444" height="616" alt="image" src="https://github.com/user-attachments/assets/c44b2f87-41e5-48a4-9a65-ed91c34661ad" />
+
 
 ### 📊 Trading Interface
 - Real-time market data display
