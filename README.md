@@ -13,7 +13,6 @@ A comprehensive Qt-based desktop trading platform with real-time market data, or
 
 <img width="444" height="616" alt="image" src="https://github.com/user-attachments/assets/c44b2f87-41e5-48a4-9a65-ed91c34661ad" />
 
-
 ### 📊 Trading Interface
 - Real-time market data display
 - Order book visualization
@@ -21,11 +20,15 @@ A comprehensive Qt-based desktop trading platform with real-time market data, or
 - Price change indicators with color coding
 - Trading volume and bid/ask spread information
 
+<img width="1393" height="922" alt="image" src="https://github.com/user-attachments/assets/949d3d45-b194-4f6a-9dd5-f0f2c23d386f" />
+
 ### 💰 Wallet Management
 - Multi-currency portfolio tracking
 - Real-time balance updates
 - Transaction history
 - Asset allocation visualization
+
+<img width="1397" height="917" alt="image" src="https://github.com/user-attachments/assets/c228a4e1-7295-4555-98e6-2048236ae580" />
 
 ### 📈 Market Analysis
 - Candlestick chart visualization
@@ -33,11 +36,15 @@ A comprehensive Qt-based desktop trading platform with real-time market data, or
 - Technical indicators
 - Market trend analysis
 
+<img width="1394" height="921" alt="image" src="https://github.com/user-attachments/assets/b187fcdf-597c-4ccd-a447-9dfee9038dfb" />
+
 ### 📋 Order Management
 - Order history tracking
 - Order status monitoring
 - Order modification and cancellation
 - Trade execution logs
+
+<img width="1393" height="920" alt="image" src="https://github.com/user-attachments/assets/a88fea1e-54a0-4bb3-be8b-683ef03e6ea7" />
 
 ## Prerequisites
 
