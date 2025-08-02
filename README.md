@@ -238,31 +238,12 @@ export QT_LOGGING_RULES="*.debug=true"
 - **Memory**: Sensitive data is cleared after use
 - **Network**: All API communications should use HTTPS
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Support
 
 For support and questions:
 - **Issues**: [GitHub Issues](https://github.com/Yrishe/Trading_App_Console/issues)
 - **Documentation**: This README and inline code comments
 - **Community**: Discussions tab on GitHub repository
-
-## Changelog
-
-### Version 1.0.0
-- Initial release with core trading functionality
-- User authentication and session management
-- Real-time market data display
-- Order placement and portfolio tracking
-- Candlestick chart visualization
-
-### Recent Updates
-- Fixed segmentation fault in main window initialization
-- Added comprehensive null checks for UI components
-- Resolved database connection conflicts
-- Improved error handling and debugging output
 
 ---
 
